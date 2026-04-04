@@ -62,43 +62,74 @@ Leftmost column: 1 + 1 = 2 → write 0, carry 1.
 After adding the carry at the front, we get 100010.
 
 What's the largest number you can store with 4 bits, if you want to be able to represent the number 0?
-Answer:
+Answer: 15
 
 How many bits would you need in order to store the numbers between 0 and 255 inclusive?
-Answer:
+Answer: 8 bits (2^8=256)
 
 How many bits would you need in order to store the numbers between 0 and 3 inclusive?
-Answer:
+Answer:2 bits
+(because 2² = 4 values → 0, 1, 2, 3)
 
 How many bits would you need in order to store the numbers between 0 and 1000 inclusive?
-Answer:
+Answer: 10 bits
+(2¹⁰ = 1024)
 
 How can you test if a binary number is a power of two (e.g. 1, 2, 4, 8, 16, ...)?
 Answer:
 
 Convert the decimal number 14 to hex.
-Answer:
+Answer:E (Hex goes from 0–15 using digits 0–9 and A–F.
+14 corresponds to E.)
 
 Convert the decimal number 386 to hex.
-Answer:
+Answer: 182
+386 ÷ 16 = 24 remainder 2
+24 ÷ 16 = 1 remainder 8
+1 ÷ 16 = 0 remainder 1
+
+Read the remainders backwards and we get 182
 
 Convert the hex number 386 to decimal.
-Answer:
+Answer:902
+Each position is a power of 16:
+
+3 × 16² = 3 × 256 = 768
+8 × 16¹ = 8 × 16 = 128
+6 × 16⁰ = 6
+
+Add them:
+768 + 128 + 6 = 902
 
 Convert the hex number B to decimal.
-Answer:
+Answer:11
+(In hex:A = 10,B = 11)
 
 If reading the byte 0x21 as a number, what decimal number would it mean?
-Answer:
+Answer: 33 (2 × 16 + 1 = 33)
 
 If reading the byte 0x21 as an ASCII character, what character would it mean?
-Answer:
+Answer:! (ASCII maps numbers to characters.
+Decimal 33 corresponds to ! (exclamation mark))
 
 If reading the byte 0x21 as a greyscale colour, as described in "Approaches for Representing Colors and Images", what colour would it mean?
-Answer:
+Answer: dark grey (n greyscale:
+0 = black
+255 = white
+33 is close to 0, so it’s a very dark grey (almost black).)
 
 If reading the bytes 0xAA00FF as an RGB colour, as described in "Approaches for Representing Colors and Images", what colour would it mean?
-Answer:
+Answer:bright purple (magenta) (Split into three bytes:
+AA = red = 170
+00 = green = 0
+FF = blue = 255
+
+High red + high blue = purple/magenta)
 
 If reading the bytes 0xAA00FF as a sequence of three one-byte decimal numbers, what decimal numbers would they be?
-Answer:
+Answer:170,0,255
+Each pair is one byte:
+
+AA = 170
+00 = 0
+FF = 255
